@@ -2,59 +2,21 @@
 
 require_once __DIR__.'/parts/header.php';
 
+$products = $connect->query("SELECT * FROM products");
+$products = $products->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <div class="main">
-  <div class="card">
-    <a href="product.php">
-      <img src="img/amanita.jpg" alt="Фото">
-    </a>
-    <div class="label">Товар (55 рублей)</div>
-    <button type="submit">Добавить в корзину</button>
-  </div>
-
-  <div class="card">
-    <a href="product.php">
-      <img src="img/amanita.jpg" alt="Фото">
-    </a>
-    <div class="label">Товар (55 рублей)</div>
-    <button type="submit">Добавить в корзину</button>
-  </div>
-
-  <div class="card">
-    <a href="product.php">
-      <img src="img/amanita.jpg" alt="Фото">
-    </a>
-    <div class="label">Товар (55 рублей)</div>
-    <button type="submit">Добавить в корзину</button>
-  </div>
-
-  <div class="card">
-    <a href="product.php">
-      <img src="img/amanita.jpg" alt="Фото">
-    </a>
-    <div class="label">Товар (55 рублей)</div>
-    <button type="submit">Добавить в корзину</button>
-  </div>
-
-
-  <div class="card">
-    <a href="product.php">
-      <img src="img/amanita.jpg" alt="Фото">
-    </a>
-    <div class="label">Товар (55 рублей)</div>
-    <button type="submit">Добавить в корзину</button>
-  </div>
-
-
-  <div class="card">
-    <a href="product.php">
-      <img src="img/amanita.jpg" alt="Фото">
-    </a>
-    <div class="label">Товар (55 рублей)</div>
-    <button type="submit">Добавить в корзину</button>
-  </div>
+  <?php foreach ($products as $product) : ?>
+    <div class="card">
+      <a href="product.php?id=<?php echo $product['id']; ?>">
+        <img src="img/<?php echo $product['img']; ?>" alt="<?php echo $product['rus_name']; ?>">
+      </a>
+      <div class="label"><?php echo $product['rus_name']; ?> (<?php echo $product['price']; ?> рублей)</div>
+      <button type="submit">Добавить в корзину</button>
+    </div>
+  <?php endforeach; ?>
 </div>
-
 <?php
 
 require_once __DIR__.'/parts/footer.php';
