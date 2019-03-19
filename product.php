@@ -1,76 +1,18 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Shop</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<?php
 
-  <nav>
-    <ul>
-      <li><a href="index.php">Главная</a></li>
-      <li><a href="#">Категория один</a></li>
-      <li><a href="#">Категория два</a></li>
-      <li><a href="cart.php">Корзина (Товаров: 15 на сумму 9955 руб)</a></li>
-    </ul>
-  </nav>
-  <hr>
+require_once __DIR__.'/parts/header.php';
 
-  <div class="main">
-    <div class="card">
-      <a href="product.php">
-        <img src="img/amanita.jpg" alt="Фото">
-      </a>
-      <div class="label">Товар (55 рублей)</div>
-      <button type="submit">Добавить в корзину</button>
-    </div>
+?>
+<div class="product-card">
+  <a href="index.html">Вернуться на главную</a>
 
-    <div class="card">
-      <a href="product.php">
-        <img src="img/amanita.jpg" alt="Фото">
-      </a>
-      <div class="label">Товар (55 рублей)</div>
-      <button type="submit">Добавить в корзину</button>
-    </div>
-
-    <div class="card">
-      <a href="product.php">
-        <img src="img/amanita.jpg" alt="Фото">
-      </a>
-      <div class="label">Товар (55 рублей)</div>
-      <button type="submit">Добавить в корзину</button>
-    </div>
-
-    <div class="card">
-      <a href="product.php">
-        <img src="img/amanita.jpg" alt="Фото">
-      </a>
-      <div class="label">Товар (55 рублей)</div>
-      <button type="submit">Добавить в корзину</button>
-    </div>
-
-
-    <div class="card">
-      <a href="product.php">
-        <img src="img/amanita.jpg" alt="Фото">
-      </a>
-      <div class="label">Товар (55 рублей)</div>
-      <button type="submit">Добавить в корзину</button>
-    </div>
-
-
-    <div class="card">
-      <a href="product.php">
-        <img src="img/amanita.jpg" alt="Фото">
-      </a>
-      <div class="label">Товар (55 рублей)</div>
-      <button type="submit">Добавить в корзину</button>
-    </div>
+  <h2>Товар (55 рублей)</h2>
+  <div class="descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, assumenda corporis deserunt dicta dolores ex illum inventore iusto nam nisi
+    nobis obcaecati perspiciatis qui ratione recusandae similique sunt veritatis voluptatibus.
   </div>
+  <img width="300" src="img/amanita.jpg" alt="Фото">
+  <button type="submit">Добавить в корзину</button>
+</div>
+<?php
 
-</body>
-</html>
-
+require_once __DIR__.'/parts/footer.php';
