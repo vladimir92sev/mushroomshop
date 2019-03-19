@@ -9,7 +9,7 @@ $products = $products->fetchAll(PDO::FETCH_ASSOC);
 <div class="main">
   <?php foreach ($products as $product) : ?>
     <div class="card">
-      <a href="product.php?id=<?php echo $product['id']; ?>">
+      <a href="product.php">
         <img src="img/<?php echo $product['img']; ?>" alt="<?php echo $product['rus_name']; ?>">
       </a>
       <div class="label"><?php echo $product['rus_name']; ?> (<?php echo $product['price']; ?> рублей)</div>
@@ -20,5 +20,3 @@ $products = $products->fetchAll(PDO::FETCH_ASSOC);
 <?php
 
 require_once __DIR__.'/parts/footer.php';
-
-
